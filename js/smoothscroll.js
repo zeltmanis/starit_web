@@ -10,7 +10,7 @@ if (!window['jQuery']) alert('The jQuery library must be included before the smo
 
 /**
  * jQuery.ScrollTo - Easy element scrolling using jQuery.
- * Copyright (c) 2007-2013 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Copyright (c) 2007-2013 Ariel Flesler - aflesler(at)gmail(dot)com | https://flesler.blogspot.com
  * Dual licensed under MIT and GPL.
  * @author Ariel Flesler
  * @version 1.4.3.1
@@ -19,7 +19,7 @@ if (!window['jQuery']) alert('The jQuery library must be included before the smo
 
 /**
  * jQuery.LocalScroll
- * Copyright (c) 2007-2010 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Copyright (c) 2007-2010 Ariel Flesler - aflesler(at)gmail(dot)com | https://flesler.blogspot.com
  * Dual licensed under MIT and GPL.
  * Date: 05/31/2010
  * @author Ariel Flesler
