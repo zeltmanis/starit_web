@@ -1,253 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-	<meta charset="utf-8">
-
-	<title>Star IT</title>
-<!--
-Comila Template
-https://www.templatemo.com/tm-490-comila
--->
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-
-	<!-- stylesheets css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-
-  	<link rel="stylesheet" href="css/et-line-font.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-  	<link rel="stylesheet" href="css/vegas.min.css">
-	<link rel="stylesheet" href="css/style.css">
-
-	<link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star IT — QA Consultancy for Startups</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- preloader section -->
-<section class="preloader">
-	<div class="sk-circle">
-       <div class="sk-circle1 sk-child"></div>
-       <div class="sk-circle2 sk-child"></div>
-       <div class="sk-circle3 sk-child"></div>
-       <div class="sk-circle4 sk-child"></div>
-       <div class="sk-circle5 sk-child"></div>
-       <div class="sk-circle6 sk-child"></div>
-      <div class="sk-circle7 sk-child"></div>
-       <div class="sk-circle8 sk-child"></div>
-       <div class="sk-circle9 sk-child"></div>
-       <div class="sk-circle10 sk-child"></div>
-       <div class="sk-circle11 sk-child"></div>
-       <div class="sk-circle12 sk-child"></div>
-     </div>
-</section>
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo"><span class="gold">✸</span> Star IT</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how">Process</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+            </ul>
+            <button class="burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#how" class="mobile-link">Process</a>
+            <a href="#philosophy" class="mobile-link">Philosophy</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#contact" class="mobile-link mobile-cta">Get in Touch</a>
+        </div>
+    </nav>
 
-<!-- home section -->
-<section id="home">
-	<div class="container">
-		<div class="row">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <canvas id="starCanvas"></canvas>
+        <div class="hero-inner">
+            <p class="eyebrow reveal">QA Consultancy · Startups &amp; Scale-ups</p>
+            <h1 class="reveal reveal-d1">
+                Your startup ships fast.<br>
+                <em>Let's make sure quality keeps up.</em>
+            </h1>
+            <p class="hero-sub reveal reveal-d2">
+                Star IT builds the QA foundation your startup needs — strategy, automation infrastructure, documentation, and the right people to maintain it all.
+            </p>
+            <div class="hero-actions reveal reveal-d3">
+                <a href="#contact" class="btn-primary">Start the conversation</a>
+                <a href="#services" class="btn-text">See our services →</a>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <div class="scroll-bar"><div class="scroll-fill"></div></div>
+            <span>scroll</span>
+        </div>
+    </section>
 
-			<div class="col-md-offset-2 col-md-8 col-sm-12">
-				<div class="home-thumb">
-					<h1 class="wow fadeInUp" data-wow-delay="0.4s">Star IT</h1>
-                    <h3 class="wow fadeInUp" data-wow-delay="0.6s">coming soon...</h3>
-          			<h3 class="wow fadeInUp" data-wow-delay="0.6s"><strong>info@starit.lv</strong> </h3>
-<!--          			<a href="#about" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="0.8s">Let's begin</a>-->
-<!--        			<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">Notify me!</a>-->
-				</div>
-			</div>
+    <!-- PROBLEM BAND -->
+    <div class="problem-band">
+        <div class="container">
+            <p class="reveal">Shipping without a QA safety net works — until it doesn't. By the time most startups react, technical debt is entrenched, bugs are in production, and compliance is already a problem. <strong>We help teams get ahead of that.</strong></p>
+        </div>
+    </div>
 
-		</div>
-	</div>		
-</section>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <p class="eyebrow reveal">What We Offer</p>
+            <h2 class="reveal reveal-d1">One partner. Full QA coverage.</h2>
+            <div class="cards">
 
-<!-- about section -->
-<!--<section id="about">-->
-<!--	<div class="container">-->
-<!--		<div class="row">-->
+                <div class="card reveal">
+                    <span class="card-num">01</span>
+                    <h3>QA Strategy &amp; Audit</h3>
+                    <p>We assess your current state and deliver a complete QA strategy — risk matrix, compliance requirements, tooling recommendations, and a phased roadmap. The kind of document that makes stakeholders say <em>"when can you start?"</em></p>
+                    <div class="tags">
+                        <span>Risk Assessment</span><span>Compliance Mapping</span><span>Roadmap</span>
+                    </div>
+                </div>
 
-<!--      <div class="col-md-6 col-sm-12">-->
-<!--        <img src="images/about-img.png" class="img-responsive wow fadeInUp" alt="About">-->
-<!--      </div>-->
+                <div class="card reveal reveal-d1">
+                    <span class="card-num">02</span>
+                    <h3>Automation Infrastructure</h3>
+                    <p>We design and build your test automation framework from scratch — mobile (iOS &amp; Android), backend API, and CI/CD pipelines. Scalable, maintainable, and built to run without a large team.</p>
+                    <div class="tags">
+                        <span>Mobile · Appium</span><span>API · pytest-bdd</span><span>Selenium</span><span>Cypress</span><span>Playwright</span><span>CI/CD Pipelines</span><span>AWS Device Farm</span>
+                    </div>
+                </div>
 
-<!--			<div class="col-md-6 col-sm-12">-->
-<!--				<div class="about-thumb">-->
-<!--					<div class="section-title">-->
-<!--						<h1 class="wow fadeIn" data-wow-delay="0.2s">our company</h1>-->
-<!--						<h3 class="wow fadeInUp" data-wow-delay="0.4s">Comila Studio is based in Hong Kong</h3>-->
-<!--					</div>-->
-<!--					<div class="wow fadeInUp" data-wow-delay="0.6s">-->
-<!--						<p>Vivamus elit risus, porttitor id placerat ut, aliquet non quam. Pellentesque nulla metus, ornare et porttitor vel, consectetur vitae erat. Vestibulum tristique semper tellus vitae condimentum. Duis sed eros eget diam dictum posuere.</p>-->
-<!--						<p>Aliquam vel gravida ligula. Phasellus ut purus ac libero ultrices commodo commodo at quam. In vestibulum purus sit amet tempus euismod. Donec sed congue nisl.</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
+                <div class="card reveal reveal-d2">
+                    <span class="card-num">03</span>
+                    <h3>QA Documentation</h3>
+                    <p>Test plans, bug lifecycles, Definition of Done, test case standards — built properly, not as an afterthought. Good documentation is the difference between a QA function that scales and one that collapses under pressure.</p>
+                    <div class="tags">
+                        <span>Test Plans</span><span>Bug Lifecycle</span><span>DoD &amp; Standards</span><span>Process Design</span>
+                    </div>
+                </div>
 
-<!--		</div>-->
-<!--	</div>-->
-<!--</section>-->
+                <div class="card reveal reveal-d3">
+                    <span class="card-num">04</span>
+                    <h3>Talent &amp; Team Advisory</h3>
+                    <p>Once the foundation is in place, we help you find the right one or two people to own it long-term. We define the role, advise on hiring, onboard them into the system, and provide training and mentoring — so quality doesn't leave when we do.</p>
+                    <div class="tags">
+                        <span>Role Definition</span><span>Hiring Advisory</span><span>Onboarding</span><span>Knowledge Transfer</span><span>Training</span><span>Mentoring</span>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </section>
 
-<!--&lt;!&ndash; feature section &ndash;&gt;-->
-<!--<section id="feature">-->
-<!--  <div class="container">-->
-<!--    <div class="row">-->
-<!--      -->
-<!--      <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="https://www.w3.org/2000/svg" class="svgcolor-light">-->
-<!--        <path d="M0 0 L50 100 L100 0 Z"></path>-->
-<!--      </svg>-->
+    <!-- HOW IT WORKS -->
+    <section class="section section-alt" id="how">
+        <div class="container">
+            <p class="eyebrow reveal">The Process</p>
+            <h2 class="reveal reveal-d1">Three steps. One solid foundation.</h2>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-num">01</div>
+                    <h3>Assess</h3>
+                    <p>We start by understanding your product, your tech stack, your team, and what's at risk. No assumptions — just a clear picture of where you are and what you need.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step reveal reveal-d1">
+                    <div class="step-num">02</div>
+                    <h3>Build</h3>
+                    <p>Strategy first, then execution. Documentation, automation framework, CI/CD pipelines, and the processes your team will actually follow.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step reveal reveal-d2">
+                    <div class="step-num">03</div>
+                    <h3>Hand Over</h3>
+                    <p>We help you hire the right person to maintain the system, transfer knowledge properly, and stay available as your product scales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!--      <div class="col-md-4 col-sm-6">-->
-<!--        <div class="media wow fadeInUp" data-wow-delay="0.4s">-->
-<!--          <div class="media-object media-left">-->
-<!--            <i class="icon icon-laptop"></i>-->
-<!--          </div>-->
-<!--          <div class="media-body">-->
-<!--            <h2 class="media-heading">Responsive</h2>-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus lacus nulla, eget varius justo tristique ut.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
+    <!-- EFFICIENCY -->
+    <section class="section" id="efficiency">
+        <div class="container">
+            <div class="two-col">
+                <div class="col-text">
+                    <p class="eyebrow reveal">The Modern Approach</p>
+                    <h2 class="reveal reveal-d1">One specialist.<br>The output of a team.</h2>
+                    <p class="reveal reveal-d2">AI-assisted tooling has changed what a single experienced QA engineer can deliver. We build automation systems where tooling handles repetitive coverage — so your startup gets senior-level quality without scaling headcount.</p>
+                    <p class="reveal reveal-d3">In practice, a two-person QA setup can maintain what traditionally required four or five. That's not a claim — it's the infrastructure we design.</p>
+                </div>
+                <div class="stats reveal reveal-d1">
+                    <div class="stat">
+                        <div class="stat-val">10+</div>
+                        <div class="stat-lbl">Years in QA</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-val">3</div>
+                        <div class="stat-lbl">Industry Domains</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-val">0 → ∞</div>
+                        <div class="stat-lbl">QA built from scratch</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-val">ISTQB</div>
+                        <div class="stat-lbl">Advanced Level Certified</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!--      <div class="col-md-4 col-sm-6">-->
-<!--        <div class="media wow fadeInUp" data-wow-delay="0.8s">-->
-<!--          <div class="media-object media-left">-->
-<!--            <i class="icon icon-refresh"></i>-->
-<!--          </div>-->
-<!--          <div class="media-body">-->
-<!--            <h2 class="media-heading">Bootstrap</h2>-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus lacus nulla, eget varius justo tristique ut.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
+    <!-- PHILOSOPHY -->
+    <section class="section section-alt" id="philosophy">
+        <div class="container">
+            <p class="eyebrow reveal">How We Think</p>
+            <h2 class="reveal reveal-d1">Quality is a design decision.</h2>
+            <div class="phil-grid">
+                <div class="phil-item reveal">
+                    <div class="phil-bar"></div>
+                    <h3>Quality is designed in, not tested in.</h3>
+                    <p>Bugs found late aren't accidents — they're a design failure. We build systems where testability is part of the architecture, not an afterthought.</p>
+                </div>
+                <div class="phil-item reveal reveal-d1">
+                    <div class="phil-bar"></div>
+                    <h3>Tests are the only documentation that stays true.</h3>
+                    <p>Specs drift. Tests don't. We write suites that define behaviour clearly and survive real-world change.</p>
+                </div>
+                <div class="phil-item reveal reveal-d2">
+                    <div class="phil-bar"></div>
+                    <h3>Process is often the bottleneck.</h3>
+                    <p>Over-engineered QA slows teams down. We design lean workflows that match how teams actually ship.</p>
+                </div>
+                <div class="phil-item reveal reveal-d3">
+                    <div class="phil-bar"></div>
+                    <h3>Testability is an architectural property.</h3>
+                    <p>Systems that are hard to test are hard to scale. We fix that at the design level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!--      <div class="col-md-4 col-sm-8">-->
-<!--        <div class="media wow fadeInUp" data-wow-delay="1.2s">-->
-<!--          <div class="media-object media-left">-->
-<!--            <i class="icon icon-chat"></i>-->
-<!--          </div>-->
-<!--          <div class="media-body">-->
-<!--            <h2 class="media-heading">Support</h2>-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus lacus nulla, eget varius justo tristique ut.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+        <div class="container">
+            <p class="eyebrow reveal">Background</p>
+            <h2 class="reveal reveal-d1">Tested across high-stakes domains.</h2>
+            <div class="exp-row">
+                <div class="exp-item reveal">
+                    <div class="exp-icon">🏦</div>
+                    <h3>Fintech &amp; Payments</h3>
+                    <p>QA for biometric payment systems, compliance-heavy environments (PCI-DSS, FIDO, PSD2, GDPR), and mobile-first financial products. Where bugs aren't just bugs — they're liability.</p>
+                </div>
+                <div class="exp-div"></div>
+                <div class="exp-item reveal reveal-d1">
+                    <div class="exp-icon">🏛️</div>
+                    <h3>Banking</h3>
+                    <p>Enterprise-grade QA in regulated banking environments. Rigorous processes, strict audit trails, and zero tolerance for defects reaching production.</p>
+                </div>
+                <div class="exp-div"></div>
+                <div class="exp-item reveal reveal-d2">
+                    <div class="exp-icon">🛒</div>
+                    <h3>E-Commerce</h3>
+                    <p>End-to-end testing of transactional platforms — checkout flows, integrations, performance under load, and edge cases that only appear at scale.</p>
+                </div>
+            </div>
 
-<!--      <div class="clearfix text-center col-md-12 col-sm-12">-->
-<!--        <a href="#contact" class="btn btn-default smoothScroll">Talk to us</a>-->
-<!--      </div>-->
+            <div class="tech-block reveal">
+                <p class="tech-label">Tools &amp; Technologies</p>
+                <p class="tech-note">Tools change. Engineering judgement doesn't. We select and adapt tooling based on the problem — and pick up what we don't know fast, because that's what engineers do.</p>
+                <div class="tech-categories">
+                    <div class="tech-cat">
+                        <span class="tech-cat-label">Test Management &amp; QA Platforms</span>
+                        <div class="tech-tags">
+                            <span>Jira</span><span>Xray</span><span>Zephyr</span><span>TestRail</span><span>Qase</span><span>ClickUp</span><span>Tosca</span>
+                        </div>
+                    </div>
+                    <div class="tech-cat">
+                        <span class="tech-cat-label">Automation &amp; Engineering</span>
+                        <div class="tech-tags">
+                            <span>Playwright</span><span>Cypress</span><span>Selenium</span><span>Appium</span><span>C#</span><span>JavaScript / TypeScript</span><span>Python</span>
+                        </div>
+                    </div>
+                    <div class="tech-cat">
+                        <span class="tech-cat-label">API &amp; Data Testing</span>
+                        <div class="tech-tags">
+                            <span>Postman</span><span>REST APIs</span><span>SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-cat">
+                        <span class="tech-cat-label">CI/CD &amp; DevOps</span>
+                        <div class="tech-tags">
+                            <span>GitHub Actions</span><span>GitLab CI</span><span>Jenkins</span><span>Docker</span>
+                        </div>
+                    </div>
+                    <div class="tech-cat">
+                        <span class="tech-cat-label">Version Control</span>
+                        <div class="tech-tags">
+                            <span>GitHub</span><span>GitLab</span><span>Bitbucket</span>
+                        </div>
+                    </div>
+                    <div class="tech-cat">
+                        <span class="tech-cat-label">Ways of Working</span>
+                        <div class="tech-tags">
+                            <span>Agile</span><span>SDLC</span><span>Test Design Techniques</span><span>Defect Lifecycle Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="two-col">
+                <div class="col-text">
+                    <p class="eyebrow reveal">Get In Touch</p>
+                    <h2 class="reveal reveal-d1">Ready to build something<br>that works properly?</h2>
+                    <p class="reveal reveal-d2">Tell us about your product and where QA fits into your picture right now. We'll come back with an honest assessment of what you need — and whether we're the right fit.</p>
+                    <div class="contact-links reveal reveal-d3">
+                        <a href="mailto:info@starit.lv" class="contact-link">
+                            <span class="cl-label">Email</span>
+                            <span class="cl-val">info@starit.lv</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/edgars-zeltmanis-9a613527/" target="_blank" class="contact-link">
+                            <span class="cl-label">LinkedIn</span>
+                            <span class="cl-val">Edgars Zeltmanis</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="form-wrap reveal reveal-d1">
+                    <div class="form-row">
+                        <div class="fg">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Jane Smith">
+                        </div>
+                        <div class="fg">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="jane@startup.com">
+                        </div>
+                    </div>
+                    <div class="fg">
+                        <label for="company">Company / Product</label>
+                        <input type="text" id="company" placeholder="What are you building?">
+                    </div>
+                    <div class="fg">
+                        <label for="message">What do you need?</label>
+                        <textarea id="message" rows="5" placeholder="Tell us where you are with QA right now..."></textarea>
+                    </div>
+                    <button class="btn-primary" id="sendBtn">Send Message</button>
+                    <p class="form-note">We respond within one business day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!--&lt;!&ndash; contact section &ndash;&gt;-->
-<!--<section id="contact">-->
-<!--	<div class="container">-->
-<!--		<div class="row">-->
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo"><span class="gold">✸</span> Star IT</div>
+                <nav class="footer-nav">
+                    <a href="#services">Services</a>
+                    <a href="#how">Process</a>
+                    <a href="#philosophy">Philosophy</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <p class="footer-copy">© 2026 Star IT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-<!--			<div class="col-md-offset-2 col-md-8 col-sm-12">-->
-<!--				<div class="section-title">-->
-<!--					<h1 class="wow fadeInUp" data-wow-delay="0.3s">Get in touch</h1>-->
-<!--					<p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>-->
-<!--				</div>-->
-<!--				<div class="contact-form wow fadeInUp" data-wow-delay="1.0s">-->
-<!--					<form id="contact-form" method="post" action="#">-->
-<!--                        <div class="col-md-6 col-sm-6">-->
-<!--                          	<input name="name" type="text" class="form-control" placeholder="Your Name" required>-->
-<!--                        </div>-->
-<!--                        <div class="col-md-6 col-sm-6">-->
-<!--                          	<input name="email" type="email" class="form-control" placeholder="Your Email" required>-->
-<!--                        </div>-->
-<!--           			  	<div class="col-md-12 col-sm-12">-->
-<!--				   			<textarea name="message" class="form-control" placeholder="Message" rows="6" required></textarea>-->
-<!--           			  	</div>-->
-<!--						<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">-->
-<!--							<input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">-->
-<!--						</div>-->
-<!--					</form>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--	-->
-<!--		</div>-->
-<!--	</div>-->
-<!--</section>-->
-
-<!--&lt;!&ndash; footer section &ndash;&gt;-->
-<!--<footer>-->
-<!--	<div class="container">-->
-<!--		<div class="row">-->
-
-<!--      <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="https://www.w3.org/2000/svg">-->
-<!--        <path d="M0 0 L50 100 L100 0 Z"></path>-->
-<!--      </svg>-->
-
-<!--      <div class="col-md-4 col-sm-6">-->
-<!--        <h2>comila</h2>-->
-<!--          <div class="wow fadeInUp" data-wow-delay="0.3s">-->
-<!--             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque luctus lacus nulla, eget varius justo tristique ut. Etiam a tellus magna.</p>-->
-<!--             <p class="copyright-text">Copyright &copy; 2016 Your Company <br>-->
-<!--             Designed by <a rel="nofollow" href="https://www.google.com/+templatemo" target="_parent">Templatemo</a></p>-->
-<!--          </div>-->
-<!--      </div>-->
-
-<!--      <div class="col-md-1 col-sm-1"></div>-->
-
-<!--      <div class="col-md-4 col-sm-5">-->
-<!--        <h2>Our Studio</h2>-->
-<!--        <p class="wow fadeInUp" data-wow-delay="0.6s">-->
-<!--          120-240 aliquam augue libero,<br>-->
-<!--          Convallis in vulputate 10220 <br>-->
-<!--          San Francisco, CA, USA-->
-<!--        </p>-->
-<!--        <ul class="social-icon">-->
-<!--          <li><a href="#" class="fa fa-facebook wow bounceIn" data-wow-delay="0.9s"></a></li>-->
-<!--          <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="1.2s"></a></li>-->
-<!--          <li><a href="#" class="fa fa-behance wow bounceIn" data-wow-delay="1.4s"></a></li>-->
-<!--          <li><a href="#" class="fa fa-dribbble wow bounceIn" data-wow-delay="1.6s"></a></li>-->
-<!--        </ul>-->
-<!--      </div>-->
-
-<!--		</div>-->
-<!--	</div>-->
-<!--</footer>-->
-
-<!--&lt;!&ndash; modal &ndash;&gt;-->
-<!--<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
-<!--  <div class="modal-dialog">-->
-<!--      <div class="modal-content modal-popup">-->
-<!--        <div class="modal-header">-->
-<!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-<!--          <h2 class="modal-title">Our Newsletter</h2>-->
-<!--        </div>-->
-<!--        <form action="#" method="post">-->
-<!--          <input name="fullname" type="text" class="form-control" id="fullname" placeholder="Full Name">-->
-<!--          <input name="email" type="text" class="form-control" id="email" placeholder="Email Address">-->
-<!--          <input name="submit" type="submit" class="form-control" id="submit" value="Subscribe Now">-->
-<!--        </form>-->
-<!--        <p>Thank you for your visiting!</p>-->
-<!--      </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-<!--&lt;!&ndash; Back top &ndash;&gt;-->
-<!--<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>-->
-
-<!-- javscript js -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-<script src="js/vegas.min.js"></script>
-
-<script src="js/wow.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/custom.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
