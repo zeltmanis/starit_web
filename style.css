@@ -607,7 +607,11 @@ h3 {
     color: var(--muted);
     letter-spacing: 0.05em;
     text-align: center;
-    margin-top: -8px;
+    margin-top: 8px;
+}
+
+.form-wrap form .btn-primary {
+    margin-top: 8px;
 }
 
 /* ── FOOTER ─────────────────────────── */
