@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Launcher — Star IT</title>
+    <meta name="description" content="AI-powered QA framework generator. Point it at any app — get a ready-to-run test framework in 30 seconds.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="QA Launcher — Generate a working test framework in 30 seconds">
+    <meta property="og:description" content="AI-powered test automation framework generator for Web, API, and Mobile. Free to try, no account needed.">
+    <meta property="og:url" content="https://starit.lv/launcher">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Star IT">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        .launcher-hero { padding: 140px 0 60px; text-align: center; }
+        .launcher-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; line-height: 1.2; margin-bottom: 1.2rem; }
+        .launcher-hero em { font-family: var(--font-display); color: var(--gold); }
+        .launcher-hero .sub { color: var(--muted); max-width: 540px; margin: 0 auto 1.5rem; font-size: 1.05rem; line-height: 1.7; }
+        .launcher-hero .who { color: var(--subtle); font-size: 0.85rem; margin-bottom: 2rem; }
+        .launcher-hero .cta-note { color: var(--muted); font-size: 0.8rem; margin-top: 0.6rem; }
+
+        .highlight-band { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 3rem 0; text-align: center; }
+        .highlight-band h2 { font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 0.6rem; }
+        .highlight-band p { color: var(--muted); font-size: 0.95rem; max-width: 520px; margin: 0 auto; }
+
+        .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .benefit { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; }
+        .benefit h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .benefit p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+        .frameworks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .fw-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; }
+        .fw-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+        .fw-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .fw-card p { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+
+        .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: center; }
+        .how-step { padding: 1.5rem; }
+        .how-num { font-family: var(--font-display); font-size: 2rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .how-step h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+        .how-step p { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+        .how-step code { background: var(--gold-dim); padding: 0.25em 0.5em; border-radius: 4px; font-size: 0.8rem; }
+
+        .roadmap-list { max-width: 640px; margin: 2rem auto; }
+        .roadmap-item { display: flex; gap: 1rem; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+        .roadmap-status { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; min-width: 80px; }
+        .roadmap-status.live { color: #4caf82; }
+        .roadmap-status.soon { color: var(--gold); }
+        .roadmap-status.planned { color: var(--muted); }
+        .roadmap-text { color: var(--white); font-size: 0.9rem; }
+
+        .cta-block { text-align: center; padding: 2.5rem 0; }
+        .cta-block p { color: var(--muted); font-size: 0.8rem; margin-top: 0.6rem; }
+
+        .section-title { text-align: center; margin-bottom: 0.5rem; }
+        .section-sub { text-align: center; color: var(--muted); max-width: 520px; margin: 0 auto 2rem; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo"><span class="gold">✸</span> Star IT</a>
+            <ul class="nav-links">
+                <li><a href="#frameworks">Frameworks</a></li>
+                <li><a href="#how">Setup</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="/#contact" class="nav-cta">Get in Touch</a></li>
+            </ul>
+            <button class="burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="launcher-hero">
+        <div class="container">
+            <p class="eyebrow">Star IT QA Launcher</p>
+            <h1>Generate a working QA framework<br><em>in 30 seconds.</em></h1>
+            <p class="sub">Point it at your app. AI analyses it, generates real test scenarios, and builds a ready-to-run framework.</p>
+            <p class="who">For startups, QA engineers, and teams who want to start automation fast.</p>
+            <a href="#how" class="btn-primary">Generate your framework</a>
+            <p class="cta-note">Try it instantly. No login. No friction.</p>
+        </div>
+    </section>
+
+    <!-- DEMO GIF -->
+    <section style="padding:0 0 2rem;text-align:center">
+        <div class="container">
+            <video autoplay loop muted playsinline style="max-width:720px;width:100%;border-radius:8px;border:1px solid var(--border);box-shadow:0 8px 40px rgba(0,0,0,0.4)">
+                <source src="images/launcher-demo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT BAND -->
+    <div class="highlight-band">
+        <div class="container">
+            <h2 class="reveal">Zero to running tests in 30 seconds</h2>
+            <p class="reveal">No boilerplate. No configuration. No dependency hunting.<br>Generate, download, run. Tests execute immediately.</p>
+        </div>
+    </div>
+
+    <!-- WHY -->
+    <section class="section" id="why">
+        <div class="container">
+            <h2 class="section-title reveal">Why QA Launcher?</h2>
+            <p class="section-sub reveal">Setting up test automation is slow and frustrating. QA Launcher removes the setup — so you can start testing right away.</p>
+
+            <div class="benefit-grid">
+                <div class="benefit reveal">
+                    <h3>AI-powered, not template-based</h3>
+                    <p>Every framework is generated from your actual app — real locators, real scenarios, real structure. Not generic templates.</p>
+                </div>
+                <div class="benefit reveal reveal-d1">
+                    <h3>Three platforms, one tool</h3>
+                    <p>Web, API, and Mobile. Same workflow, same quality. Choose what you need.</p>
+                </div>
+                <div class="benefit reveal reveal-d2">
+                    <h3>Production-grade stack</h3>
+                    <p>Built with industry-standard tools: Playwright, Cucumber, REST Assured, Appium. Not a prototype.</p>
+                </div>
+                <div class="benefit reveal reveal-d3">
+                    <h3>Runs locally, stays private</h3>
+                    <p>Everything runs in Docker on your machine. Credentials and generated files never leave your computer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRAMEWORKS -->
+    <section class="section section-alt" id="frameworks">
+        <div class="container">
+            <h2 class="section-title reveal">What it generates</h2>
+            <p class="section-sub reveal">Three complete frameworks. Each one ready to run out of the box.</p>
+
+            <div class="frameworks">
+                <div class="fw-card reveal">
+                    <p class="fw-label">Web</p>
+                    <h3>Playwright + TypeScript + Cucumber</h3>
+                    <p>Page objects, named locators, Gherkin scenarios, step definitions. Handles login flows and cookie banners.</p>
+                </div>
+                <div class="fw-card reveal reveal-d1">
+                    <p class="fw-label">API</p>
+                    <h3>Java + REST Assured + Cucumber</h3>
+                    <p>Endpoint scenarios, test data file, JWT auth setup, variable substitution. Works with any REST API.</p>
+                </div>
+                <div class="fw-card reveal reveal-d2">
+                    <p class="fw-label">Mobile</p>
+                    <h3>WebdriverIO + Appium + Cucumber</h3>
+                    <p>Cross-platform locators (Android + iOS), real UI scenarios, separate reports per platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+        <div class="container">
+            <h2 class="section-title reveal">Get started in 3 steps</h2>
+            <p class="section-sub reveal">Docker is the only prerequisite.</p>
+
+            <div class="how-grid">
+                <div class="how-step reveal">
+                    <div class="how-num">1</div>
+                    <h3>Install Docker</h3>
+                    <p>Download from <a href="https://docker.com/get-started" target="_blank" style="color:var(--gold)">docker.com</a></p>
+                </div>
+                <div class="how-step reveal reveal-d1">
+                    <div class="how-num">2</div>
+                    <h3>Run one command</h3>
+                    <p><code>docker run -d -p 8080:8080 edgarszeltmanis/qa-launcher</code></p>
+                </div>
+                <div class="how-step reveal reveal-d2">
+                    <div class="how-num">3</div>
+                    <h3>Open localhost:8080</h3>
+                    <p>Enter your URL, click Generate, download, run <code>bash setup.sh</code></p>
+                </div>
+            </div>
+
+            <div class="cta-block reveal">
+                <a href="https://hub.docker.com/r/edgarszeltmanis/qa-launcher" target="_blank" class="btn-primary">Get QA Launcher</a>
+                <p>Try it instantly. No login. No friction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S NEXT -->
+    <section class="section section-alt" id="roadmap">
+        <div class="container" style="text-align:center">
+            <h2 class="section-title reveal">What's next</h2>
+            <p class="section-sub reveal">QA Launcher is actively developed. Here's where we're heading.</p>
+
+            <div style="max-width:440px;margin:2rem auto;text-align:left">
+                <p class="reveal" style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem">Coming soon</p>
+                <p class="reveal" style="color:var(--muted);font-size:0.9rem;line-height:1.8">CI/CD pipeline generation<br>Cloud version — no Docker required</p>
+
+                <p class="reveal reveal-d1" style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--subtle);margin:1.5rem 0 0.6rem">Planned</p>
+                <p class="reveal reveal-d1" style="color:var(--muted);font-size:0.9rem;line-height:1.8">Smarter locator validation<br>Deeper mobile coverage<br>Cloud test execution</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUILT BY -->
+    <section class="section">
+        <div class="container" style="text-align:center;padding:2rem 36px">
+            <p class="eyebrow reveal">Built by</p>
+            <h2 class="reveal reveal-d1" style="margin-bottom:1rem"><span class="gold">✸</span> Star IT</h2>
+            <p class="reveal reveal-d2" style="color:var(--muted);max-width:460px;margin:0 auto 2rem;font-size:0.95rem">QA Consultancy for Startups. We build test automation infrastructure and the processes that make quality sustainable.</p>
+            <div class="reveal reveal-d3">
+                <a href="/" class="btn-text">Visit starit.lv →</a>
+                <a href="/#contact" class="btn-text" style="margin-left:2rem">Get in touch →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo"><span class="gold">✸</span> Star IT</div>
+                <nav class="footer-nav">
+                    <a href="/">Home</a>
+                    <a href="#frameworks">Frameworks</a>
+                    <a href="#how">Setup</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="/#contact">Contact</a>
+                </nav>
+                <p class="footer-copy">&copy; 2026 Star IT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

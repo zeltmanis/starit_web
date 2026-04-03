@@ -25,6 +25,7 @@
         <div class="nav-inner">
             <a href="#" class="nav-logo"><span class="gold">✸</span> Star IT</a>
             <ul class="nav-links">
+                <li><a href="#product">Product</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#how">Process</a></li>
                 <li><a href="#philosophy">Philosophy</a></li>
@@ -36,6 +37,7 @@
             </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
+            <a href="#product" class="mobile-link">Product</a>
             <a href="#services" class="mobile-link">Services</a>
             <a href="#how" class="mobile-link">Process</a>
             <a href="#philosophy" class="mobile-link">Philosophy</a>
@@ -57,7 +59,8 @@
                 Star IT builds the QA foundation your startup needs — strategy, automation infrastructure, documentation, and the right people to maintain it all.
             </p>
             <div class="hero-actions reveal reveal-d3">
-                <a href="#contact" class="btn-primary">Start the conversation</a>
+                <a href="#product" class="btn-primary">Try QA Launcher</a>
+                <a href="#contact" class="btn-text">Start the conversation →</a>
                 <a href="#services" class="btn-text">See our services →</a>
             </div>
         </div>
@@ -280,6 +283,78 @@
         </div>
     </section>
 
+    <!-- PRODUCT -->
+    <section class="section" id="product">
+        <div class="container">
+            <p class="eyebrow reveal">Our Product</p>
+            <h2 class="reveal reveal-d1">QA Launcher — generate a test framework<br><em>in 30 seconds.</em></h2>
+            <p class="hero-sub reveal reveal-d2" style="max-width:680px;margin-bottom:2.5rem">
+                Point it at any website, API, or mobile app. AI analyses it and generates a complete, ready-to-run test automation framework. You just download and run.
+            </p>
+
+            <div class="cards">
+                <div class="card reveal">
+                    <span class="card-num">Web</span>
+                    <h3>Playwright + TypeScript + Cucumber</h3>
+                    <p>Enter a URL. AI crawls the page, identifies interactive elements, and generates page objects, locators, Gherkin scenarios, and step definitions. Handles login flows and cookie banners automatically.</p>
+                    <div class="tags">
+                        <span>Playwright</span><span>TypeScript</span><span>Cucumber</span><span>Named Locators</span>
+                    </div>
+                </div>
+
+                <div class="card reveal reveal-d1">
+                    <span class="card-num">API</span>
+                    <h3>Java + REST Assured + Cucumber</h3>
+                    <p>Provide a base URL and optional Swagger spec. AI generates Gherkin scenarios, a test data file, JWT authentication setup, and Java step definitions. Works with any REST API.</p>
+                    <div class="tags">
+                        <span>Java</span><span>REST Assured</span><span>Cucumber</span><span>JWT Auth</span><span>Test Data</span>
+                    </div>
+                </div>
+
+                <div class="card reveal reveal-d2">
+                    <span class="card-num">Mobile</span>
+                    <h3>WebdriverIO + Appium + Cucumber</h3>
+                    <p>Connect to a running emulator or simulator. AI reads the UI hierarchy, extracts platform-specific selectors, and generates scenarios that run on both Android and iOS from one test suite.</p>
+                    <div class="tags">
+                        <span>WebdriverIO</span><span>Appium</span><span>TypeScript</span><span>Android + iOS</span>
+                    </div>
+                </div>
+
+                <div class="card reveal reveal-d3" style="opacity:0.4;display:flex;align-items:center;justify-content:center;min-height:180px">
+                    <div style="text-align:center">
+                        <h3>CI/CD Pipelines</h3>
+                        <p style="color:var(--muted);font-size:0.9em;margin-top:0.5rem">Coming soon</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="steps" style="margin-top:3rem">
+                <div class="step reveal">
+                    <div class="step-num">01</div>
+                    <h3>Install Docker</h3>
+                    <p>One dependency. Works on Mac, Windows, and Linux.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step reveal reveal-d1">
+                    <div class="step-num">02</div>
+                    <h3>Run one command</h3>
+                    <p><code style="background:rgba(201,168,76,0.1);padding:0.3em 0.6em;border-radius:6px;font-size:0.85em">docker run -d -p 8080:8080 edgarszeltmanis/qa-launcher</code></p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step reveal reveal-d2">
+                    <div class="step-num">03</div>
+                    <h3>Open localhost:8080</h3>
+                    <p>Enter your URL, click Generate, download the ZIP. Tests run with one command: <code style="background:rgba(201,168,76,0.1);padding:0.3em 0.6em;border-radius:6px;font-size:0.85em">bash setup.sh</code></p>
+                </div>
+            </div>
+
+            <div class="reveal" style="text-align:center;margin-top:2.5rem">
+                <a href="launcher.html" class="btn-primary">Get QA Launcher</a>
+                <p style="margin-top:0.6rem;font-size:0.8rem;color:var(--muted);letter-spacing:0.02em">Try it instantly. No login. No friction.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="section section-alt" id="contact">
         <div class="container">
@@ -333,6 +408,7 @@
             <div class="footer-inner">
                 <div class="footer-logo"><span class="gold">✸</span> Star IT</div>
                 <nav class="footer-nav">
+                    <a href="#product">Product</a>
                     <a href="#services">Services</a>
                     <a href="#how">Process</a>
                     <a href="#philosophy">Philosophy</a>
