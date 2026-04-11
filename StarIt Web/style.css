@@ -341,7 +341,6 @@ h3 {
     padding: 40px 36px;
     transition: background 0.25s;
 }
-.card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .card:hover { background: var(--surface); }
 .card-num {
     display: block;
