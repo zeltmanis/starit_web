@@ -358,6 +358,42 @@ h3 {
     font-weight: 300;
 }
 .card p em { color: var(--white); font-style: italic; }
+
+/* Course audience — compact grid (tight cells, clear hierarchy) */
+.course-lead {
+    max-width: 640px;
+    margin-bottom: 28px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 400;
+}
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.audience {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    transition: border-color 0.2s;
+}
+.audience:hover { border-color: var(--border-h); }
+.audience h3 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-bottom: 6px;
+}
+.audience p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+    font-weight: 300;
+    margin: 0;
+}
 .tags { display: flex; flex-wrap: wrap; gap: 7px; }
 .tags span {
     font-size: 11px;
@@ -643,6 +679,7 @@ h3 {
 /* ── RESPONSIVE ─────────────────────── */
 @media (max-width: 920px) {
     .cards { grid-template-columns: 1fr; }
+    .audience-grid { grid-template-columns: 1fr 1fr; }
     .two-col { grid-template-columns: 1fr; gap: 52px; }
     .phil-grid { grid-template-columns: 1fr; gap: 32px; }
     .steps { flex-direction: column; gap: 36px; }
@@ -658,6 +695,7 @@ h3 {
     .tech-cat { grid-template-columns: 1fr; gap: 10px; }
 }
 @media (max-width: 560px) {
+    .audience-grid { grid-template-columns: 1fr; }
     .container { padding: 0 20px; }
     .section { padding: 72px 0; }
     .hero-inner { padding: 60px 20px; }
