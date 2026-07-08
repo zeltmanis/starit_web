@@ -113,38 +113,3 @@
     }, { threshold: 0.1 });
     els.forEach(el => io.observe(el));
 })();
-
-
-// ── Contact form (mailto) ─────────────────────────────────────
-(function () {
-    const btn = document.getElementById('sendBtn');
-    if (!btn) return;
-
-    btn.addEventListener('click', () => {
-        const name    = (document.getElementById('name')?.value    || '').trim();
-        const email   = (document.getElementById('email')?.value   || '').trim();
-        const company = (document.getElementById('company')?.value || '').trim();
-        const message = (document.getElementById('message')?.value || '').trim();
-
-        if (!name || !email || !message) {
-            const orig = btn.textContent;
-            btn.textContent = 'Please fill in name, email and message';
-            btn.style.background = '#7a6030';
-            setTimeout(() => {
-                btn.textContent = orig;
-                btn.style.background = '';
-            }, 2800);
-            return;
-        }
-
-        const subject = encodeURIComponent(`Star IT enquiry from ${name}`);
-        const body    = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\nCompany: ${company || '—'}\n\n${message}`
-        );
-        window.location.href = `mailto:info@starit.lv?subject=${subject}&body=${body}`;
-
-        const orig = btn.textContent;
-        btn.textContent = '✓ Opening your email client…';
-        setTimeout(() => { btn.textContent = orig; }, 3000);
-    });
-})();
