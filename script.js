@@ -2,6 +2,9 @@
 // STAR IT — script.js
 // ===================================
 
+// Progressive-enhancement flag: reveal-hiding only applies when JS runs.
+document.documentElement.classList.add('js');
+
 // ── Starfield ─────────────────────────────────────────────────
 (function () {
     const canvas = document.getElementById('starCanvas');

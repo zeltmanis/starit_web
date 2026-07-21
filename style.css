@@ -94,12 +94,15 @@ h3 {
 }
 
 /* ── Reveal ─────────────────────────── */
-.reveal {
+/* Progressive enhancement: content is visible by default; it is hidden and
+   faded in only when JS actually runs (script.js stamps .js on <html>).
+   No-JS visitors, crawlers, and instant full-page captures see everything. */
+.js .reveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.65s ease, transform 0.65s ease;
 }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.js .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-d1 { transition-delay: 0.1s; }
 .reveal-d2 { transition-delay: 0.2s; }
 .reveal-d3 { transition-delay: 0.3s; }
@@ -229,7 +232,8 @@ h3 {
 /* ── HERO ───────────────────────────── */
 .hero {
     position: relative;
-    min-height: 100vh;
+    /* min() caps the hero in full-page captures, where 100vh = the whole document */
+    min-height: min(100vh, 950px);
     display: flex;
     align-items: center;
     padding-top: var(--nav-h);
