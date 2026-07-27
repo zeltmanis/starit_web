@@ -17,7 +17,7 @@
     <meta property="og:image" content="https://starit.lv/images/slide-1.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://starit.lv/images/slide-1.jpg">
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
@@ -243,19 +243,34 @@
             <h2 class="reveal reveal-d1">Tested across high-stakes domains.</h2>
             <div class="exp-row">
                 <div class="exp-item reveal">
-                    <div class="exp-icon">🏦</div>
+                    <div class="exp-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="9" width="20" height="11" rx="1.5"/><path d="M2 13h20"/>
+                            <circle cx="12" cy="16.5" r="1.6"/><path d="M6 9V6.2a1 1 0 0 1 .6-.92l5-2.15a1 1 0 0 1 .8 0l5 2.15a1 1 0 0 1 .6.92V9"/>
+                        </svg>
+                    </div>
                     <h3>Fintech &amp; Payments</h3>
                     <p>QA for biometric payment systems, compliance-heavy environments (PCI-DSS, FIDO, PSD2, GDPR), and mobile-first financial products. Where bugs aren't just bugs — they're liability.</p>
                 </div>
                 <div class="exp-div"></div>
                 <div class="exp-item reveal reveal-d1">
-                    <div class="exp-icon">🏛️</div>
+                    <div class="exp-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9.5 12 4l9 5.5"/><path d="M4 9.5v9"/><path d="M9 9.5v9"/><path d="M15 9.5v9"/><path d="M20 9.5v9"/>
+                            <path d="M2.5 20.5h19"/>
+                        </svg>
+                    </div>
                     <h3>Banking</h3>
                     <p>Enterprise-grade QA in regulated banking environments. Rigorous processes, strict audit trails, and zero tolerance for defects reaching production.</p>
                 </div>
                 <div class="exp-div"></div>
                 <div class="exp-item reveal reveal-d2">
-                    <div class="exp-icon">🛒</div>
+                    <div class="exp-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2.5 3h2.2l2.3 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/>
+                            <circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/>
+                        </svg>
+                    </div>
                     <h3>E-Commerce</h3>
                     <p>End-to-end testing of transactional platforms — checkout flows, integrations, performance under load, and edge cases that only appear at scale.</p>
                 </div>
@@ -309,11 +324,40 @@
     <!-- COURSE / ACADEMY -->
     <section class="section section-alt" id="course">
         <div class="container">
-            <p class="eyebrow reveal">Learn AI</p>
-            <h2 class="reveal reveal-d1">Applied AI for <em>Software Professionals</em></h2>
+            <p class="eyebrow reveal">Star IT Academy</p>
+            <h2 class="reveal reveal-d1">Two courses. <em>Applied AI, taught properly.</em></h2>
             <p class="hero-sub reveal reveal-d2" style="max-width:640px;margin-bottom:1.6rem">
-                Understand AI. Evaluate AI systems. Work with AI. One course on how modern AI actually works — LLMs, RAG, agents, evaluation — for everyone who builds, evaluates, or uses AI every day.
+                Practical AI training for people who build, test, and use AI systems at work — how it actually works, and how to work with it safely.
             </p>
+
+            <!-- Prices live on the academy site only. The security course is on a
+                 launch price that will move, and a figure duplicated across two
+                 domains is a figure that goes stale on one of them. -->
+            <div class="course-grid">
+                <article class="course-card reveal">
+                    <p class="course-card-tag">Course 01</p>
+                    <h3>Applied AI for Software Professionals</h3>
+                    <p>Understand AI. Evaluate AI systems. Work with AI. How modern AI actually works — LLMs, RAG, agents, evaluation — for everyone who builds, evaluates, or uses AI every day.</p>
+                    <ul class="course-points">
+                        <li>LLMs, RAG and agents from first principles</li>
+                        <li>How to evaluate AI quality and behaviour</li>
+                        <li>Professional certificate on completion</li>
+                    </ul>
+                    <a href="https://starit-academy.com/courses/fundamentals" target="_blank" rel="noopener noreferrer" class="btn-text">Course details →</a>
+                </article>
+
+                <article class="course-card reveal reveal-d1">
+                    <p class="course-card-tag"><span class="course-new">New</span> Course 02</p>
+                    <h3>AI Security Essentials</h3>
+                    <p>Use, evaluate and work with AI systems securely — whatever your role. Spot prompt injection and jailbreaks, keep company and customer data out of the wrong tools, and verify AI output before you trust it.</p>
+                    <ul class="course-points">
+                        <li>Six modules and interactive lessons</li>
+                        <li>Hands-on browser labs — zero setup</li>
+                        <li>Break an AI assistant's guardrail yourself, in a sandbox</li>
+                    </ul>
+                    <a href="https://starit-academy.com/courses/ai-security" target="_blank" rel="noopener noreferrer" class="btn-text">Course details →</a>
+                </article>
+            </div>
 
             <div class="cert-badge reveal">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
@@ -353,7 +397,7 @@
             </div>
 
             <div class="reveal" style="margin-top:2.2rem">
-                <a href="https://starit-academy.com/" target="_blank" rel="noopener noreferrer" class="btn-primary">Explore the Course</a>
+                <a href="https://starit-academy.com/" target="_blank" rel="noopener noreferrer" class="btn-primary">Explore Star IT Academy</a>
             </div>
         </div>
     </section>

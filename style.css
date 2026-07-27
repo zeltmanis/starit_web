@@ -440,6 +440,74 @@ h3 {
 .card p em { color: var(--white); font-style: italic; }
 
 /* Course audience — compact grid (tight cells, clear hierarchy) */
+/* ── COURSES ────────────────────────── */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 44px;
+}
+.course-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 30px 26px;
+    transition: border-color 0.25s ease;
+}
+.course-card:hover { border-color: var(--border-h); }
+.course-card h3 { font-size: 19px; margin: 12px 0 12px; }
+.course-card > p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.75;
+    font-weight: 300;
+}
+.course-card-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.course-new {
+    background: var(--gold-dim);
+    border: 1px solid var(--border-h);
+    color: var(--gold);
+    border-radius: 999px;
+    padding: 3px 10px;
+    letter-spacing: 0.1em;
+}
+.course-points {
+    margin: 20px 0 24px;
+    display: grid;
+    gap: 9px;
+}
+.course-points li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 13.5px;
+    color: var(--white);
+    font-weight: 300;
+    line-height: 1.6;
+}
+.course-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+/* Pushes the link to the card foot so both cards align regardless of copy length. */
+.course-card .btn-text { margin-top: auto; align-self: flex-start; }
+
 .course-lead {
     max-width: 640px;
     margin-bottom: 28px;
@@ -624,7 +692,11 @@ h3 {
 }
 .exp-item:first-child { padding-left: 0; }
 .exp-item:last-child  { padding-right: 0; }
-.exp-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+/* Line icons, not emoji: emoji render differently on every OS, so their weight
+   and colour were outside our control — and full-colour glyphs on a gold-on-
+   black page were the cheapest-looking element on it. */
+.exp-icon { margin-bottom: 18px; display: block; color: var(--gold); }
+.exp-icon svg { width: 26px; height: 26px; display: block; opacity: 0.85; }
 .exp-item h3 { margin-bottom: 10px; }
 .exp-item p { font-size: 14px; color: var(--muted); line-height: 1.75; font-weight: 300; }
 .exp-div {
