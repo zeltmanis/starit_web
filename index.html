@@ -17,6 +17,56 @@
     <meta property="og:image" content="https://starit.lv/images/slide-1.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://starit.lv/images/slide-1.jpg">
+    <!-- Structured data. Every claim here is already stated on the page — no
+         address, phone, founding date or rating, because those are not known
+         and invented structured data is worse than none. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://starit.lv/#org",
+          "name": "Star IT",
+          "url": "https://starit.lv/",
+          "email": "info@starit.lv",
+          "description": "QA consultancy for startups and scale-ups. Star IT builds QA strategy, test automation infrastructure, documentation, and the hiring path to maintain it.",
+          "founder": { "@id": "https://starit.lv/#edgars" },
+          "knowsAbout": ["Quality assurance", "Test automation", "CI/CD", "QA strategy", "Mobile testing", "API testing", "AI evaluation"],
+          "areaServed": ["Fintech", "Banking", "E-commerce"],
+          "sameAs": ["https://starit-academy.com/"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "QA services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "QA Strategy & Audit" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automation Infrastructure" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "QA Documentation" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talent & Team Advisory" } }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://starit.lv/#edgars",
+          "name": "Edgars Zeltmanis",
+          "jobTitle": "QA Consultant",
+          "worksFor": { "@id": "https://starit.lv/#org" },
+          "sameAs": ["https://zeltmanis.com/"]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://starit.lv/launcher.html#app",
+          "name": "QA Launcher",
+          "url": "https://starit.lv/launcher.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Docker (macOS, Windows, Linux)",
+          "description": "Generates a ready-to-run test automation framework for web, API, or mobile from a URL or spec.",
+          "publisher": { "@id": "https://starit.lv/#org" }
+        }
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="style.css?v=12">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
