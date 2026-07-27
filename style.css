@@ -899,6 +899,21 @@ h3 {
 .footer-nav a:hover { color: var(--white); }
 .footer-copy { font-size: 12px; color: var(--subtle); letter-spacing: 0.03em; }
 
+/* ── REDUCED MOTION ─────────────────── */
+/* Three things move on this site: the scroll-reveal, the starfield, and smooth
+   scrolling. For a visitor with vestibular sensitivity that is three too many,
+   and the OS already tells us. Content still appears — the reveal is a
+   progressive enhancement, so stilling it leaves everything visible. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+    .js .reveal { opacity: 1 !important; transform: none !important; }
+}
+
 /* ── RESPONSIVE ─────────────────────── */
 @media (max-width: 920px) {
     .cards { grid-template-columns: 1fr; }

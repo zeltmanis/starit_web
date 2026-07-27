@@ -11,6 +11,10 @@ document.documentElement.classList.add('js');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let W, H, stars = [];
+    // CSS can still a transition but not a canvas loop. Under reduced motion the
+    // scene is painted once and left there: the starfield is the hero's texture,
+    // so stopping the drift is the goal, not blanking the panel.
+    const animate = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const COUNT = 200;
     const GOLD  = 'rgba(196, 156, 74,';
@@ -72,13 +76,13 @@ document.documentElement.classList.add('js');
             if (s.y < -3) { s.y = H + 3; s.x = Math.random() * W; }
         });
 
-        requestAnimationFrame(draw);
+        if (animate) requestAnimationFrame(draw);
     }
 
     window.addEventListener('resize', () => { resize(); init(); });
     resize();
     init();
-    requestAnimationFrame(draw);
+    draw();
 })();
 
 
