@@ -17,7 +17,7 @@
     <meta property="og:image" content="https://starit.lv/images/slide-1.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://starit.lv/images/slide-1.jpg">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
@@ -56,18 +56,37 @@
     <section class="hero" id="hero">
         <canvas id="starCanvas"></canvas>
         <div class="hero-inner">
-            <p class="eyebrow reveal">QA Consultancy · Startups &amp; Scale-ups</p>
-            <h1 class="reveal reveal-d1">
-                Your startup ships fast.<br>
-                <em>Let's make sure quality keeps up.</em>
-            </h1>
-            <p class="hero-sub reveal reveal-d2">
-                Star IT builds the QA foundation your startup needs — strategy, automation infrastructure, documentation, and the right people to maintain it all.
-            </p>
-            <div class="hero-actions reveal reveal-d3">
-                <a href="#product" class="btn-primary">Try QA Launcher</a>
-                <a href="#contact" class="btn-text">Start the conversation →</a>
-                <a href="#services" class="btn-text">See our services →</a>
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow reveal">QA Consultancy · Startups &amp; Scale-ups</p>
+                    <h1 class="reveal reveal-d1">
+                        Your startup ships fast.<br>
+                        <em>Let's make sure quality keeps up.</em>
+                    </h1>
+                    <p class="hero-sub reveal reveal-d2">
+                        Star IT builds the QA foundation your startup needs — strategy, automation infrastructure, documentation, and the right people to maintain it all.
+                    </p>
+                    <div class="hero-actions reveal reveal-d3">
+                        <a href="#product" class="btn-primary">Try QA Launcher</a>
+                        <a href="#contact" class="btn-text">Start the conversation →</a>
+                        <a href="#services" class="btn-text">See our services →</a>
+                    </div>
+                </div>
+
+                <!-- The demo already existed on launcher.html; the hero's right
+                     half was empty and the primary CTA is "Try QA Launcher", so
+                     showing the product here reinforces the action rather than
+                     decorating around it. Poster paints first so the 1MB clip
+                     is never the largest contentful paint. -->
+                <figure class="hero-visual reveal reveal-d2">
+                    <video class="hero-demo" autoplay loop muted playsinline
+                           preload="metadata"
+                           poster="images/launcher-demo-poster.jpg"
+                           aria-label="QA Launcher generating a test framework">
+                        <source src="images/launcher-demo.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>QA Launcher — a framework generated in 30 seconds</figcaption>
+                </figure>
             </div>
 
             <!-- Proof above the fold. A visitor should learn what we do, who we
