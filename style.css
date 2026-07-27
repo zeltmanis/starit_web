@@ -282,6 +282,82 @@ h3 {
     gap: 28px;
     flex-wrap: wrap;
 }
+/* ── HERO PROOF ─────────────────────── */
+/* Client marks are flattened to white PNGs with alpha and tinted by opacity —
+   three logos in their own brand colours (green, green, blue) would fight the
+   gold palette and read as a sponsor banner. */
+.hero-proof {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    max-width: 720px;
+}
+
+/* The proof only does its job if it is above the fold. On a short laptop
+   viewport the hero content now runs close to 100vh, so tighten rather than
+   let the logos fall below it. */
+@media (max-height: 860px) {
+    .hero-inner { padding-top: 56px; padding-bottom: 56px; }
+    .hero-inner h1 { margin-bottom: 20px; }
+    .hero-sub { margin-bottom: 30px; }
+    .hero-proof { margin-top: 34px; padding-top: 22px; }
+    .hero-proof-meta { margin-top: 18px; }
+}
+.hero-proof-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-bottom: 20px;
+}
+.client-logos {
+    display: flex;
+    align-items: center;
+    gap: clamp(28px, 5vw, 56px);
+    flex-wrap: wrap;
+}
+.client-logos img {
+    display: block;
+    width: auto;
+    opacity: 0.55;
+    filter: grayscale(1);
+    transition: opacity 0.25s ease;
+}
+.client-logos li:hover img { opacity: 0.9; }
+
+/* Optical sizing, not mechanical: a wordmark with a heavy lockup reads larger
+   than a light two-line mark at the same pixel height. */
+.client-logos img[alt="Handwave"]   { height: 26px; }
+.client-logos img[alt="Fressnapf"]  { height: 24px; }
+.client-logos img[alt^="Starkkraft"]{ height: 30px; }
+
+.hero-proof-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    margin-top: 26px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+.hero-proof-meta span { display: inline-flex; align-items: center; gap: 22px; }
+.hero-proof-meta span + span::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+    .hero-proof { margin-top: 44px; padding-top: 26px; }
+    .client-logos { gap: 26px; }
+    .client-logos img[alt="Handwave"]   { height: 21px; }
+    .client-logos img[alt="Fressnapf"]  { height: 19px; }
+    .client-logos img[alt^="Starkkraft"]{ height: 24px; }
+}
+
 .scroll-hint {
     position: absolute;
     bottom: 36px;
