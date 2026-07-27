@@ -267,6 +267,8 @@ h3 {
     letter-spacing: -0.015em;
     margin-bottom: 28px;
     max-width: 780px;
+    /* Stops the italic line stranding "up." on a row of its own. */
+    text-wrap: balance;
 }
 .hero-inner h1 em {
     font-style: italic;
@@ -346,7 +348,7 @@ h3 {
     color: var(--muted);
 }
 .hero-proof-meta span { display: inline-flex; align-items: center; gap: 22px; }
-.hero-proof-meta span + span::before {
+.hero-proof-meta span:not(:last-child)::after {
     content: '';
     width: 3px;
     height: 3px;
