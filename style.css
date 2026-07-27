@@ -249,6 +249,11 @@ h3 {
 .hero-inner {
     position: relative;
     z-index: 1;
+    /* .hero is a flex container, so without width:100% this sizes to its widest
+       child (the h1 at 780px) and margin:auto then centres that narrow box —
+       leaving the hero inset ~130px from the nav logo and every .container
+       section below it. */
+    width: 100%;
     max-width: var(--max-w);
     margin: 0 auto;
     padding: 80px 36px;
