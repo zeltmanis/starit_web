@@ -1,0 +1,51 @@
+name: Deploy to Hostinger
+
+# Every push to main syncs the site to starit.lv's public_html over FTP, the same way
+# zeltmanis.com deploys. The Hostinger copy was uploaded by hand once and then left behind
+# while the site moved on in git; it went stale and its certificate lapsed unnoticed
+# (found 12 Nov 2026 through Search Console 404s). A deploy on every push keeps one source.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Connect and report what would change, upload nothing"
+        type: boolean
+        default: true
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # FTP sync deletes remotely what is missing locally, so an empty checkout would empty the
+      # live site; refuse before connecting.
+      - name: Check the site is there
+        run: |
+          test -f index.html || { echo "no index.html - refusing to deploy"; exit 1; }
+          echo "deploying $(git ls-files | wc -l) tracked files"
+
+      - name: Sync to public_html
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          dangerous-clean-slate: false
+          dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.DS_Store
+            **/.idea/**
+            CNAME
